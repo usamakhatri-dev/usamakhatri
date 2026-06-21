@@ -88,6 +88,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "Usama Khatri" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:title", content: "Usama Khatri — AI-Powered Graphic & UI/UX Designer" },
+      { name: "twitter:title", content: "Usama Khatri — AI-Powered Graphic & UI/UX Designer" },
+      { name: "description", content: "A modern, professional portfolio showcasing AI-powered graphic design, UI/UX, and content creation." },
+      { property: "og:description", content: "A modern, professional portfolio showcasing AI-powered graphic design, UI/UX, and content creation." },
+      { name: "twitter:description", content: "A modern, professional portfolio showcasing AI-powered graphic design, UI/UX, and content creation." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/nWWrXcERWrPzvxXh4dnjP3MKeH33/social-images/social-1782030097183-Screenshot_2026-06-21_132124.webp" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/nWWrXcERWrPzvxXh4dnjP3MKeH33/social-images/social-1782030097183-Screenshot_2026-06-21_132124.webp" },
     ],
     links: [
       {
