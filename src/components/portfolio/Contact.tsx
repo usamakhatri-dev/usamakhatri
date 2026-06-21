@@ -55,7 +55,7 @@ export function Contact() {
           subtitle="Whether you need branding, social media design, UI/UX design, or creative content, I'd love to hear about your project."
         />
 
-        <div className="mt-14 grid gap-8 md:grid-cols-[0.9fr_1.1fr] lg:gap-12">
+        <div className="mt-14 grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-12">
           <Reveal>
             <div className="flex flex-col gap-3">
               {contactLinks.map((c) => (
