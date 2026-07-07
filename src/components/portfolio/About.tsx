@@ -1,13 +1,13 @@
 import { useEffect, useRef, useState } from "react";
 import { useInView } from "motion/react";
-import { Briefcase, Layout, Share2, Video } from "lucide-react";
+import { Briefcase, Layout, Share2, Sparkles } from "lucide-react";
 import { Reveal } from "./Reveal";
 
 const stats = [
   { icon: Briefcase, value: 2, suffix: "+", label: "Branding Projects" },
   { icon: Layout, value: 1, suffix: "", label: "UI/UX App Project" },
   { icon: Share2, value: 12, suffix: "+", label: "Social Media Designs" },
-  { icon: Video, value: 100, suffix: "%", label: "Educational Content" },
+  { icon: Sparkles, value: 100, suffix: "%", label: "AI-Powered Workflow" },
 ];
 
 function Counter({ value, suffix }: { value: number; suffix: string }) {
@@ -54,14 +54,14 @@ export function About() {
               </h2>
               <div className="mt-6 space-y-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
                 <p>
-                  Hi, I'm Usama Khatri, an AI-Powered Graphic Designer, UI/UX Designer, and Content
-                  Creator passionate about creating designs that are both visually appealing and
+                  Hi, I'm Usama Khatri, an AI-Powered Graphic Designer and UI/UX Designer
+                  passionate about creating designs that are both visually appealing and
                   strategically effective.
                 </p>
                 <p>
-                  My expertise includes branding, social media design, and UI/UX design. I also
-                  create educational content focused on graphic design, AI tools, and creative
-                  workflows.
+                  My expertise includes branding, social media design, and UI/UX design,
+                  helping businesses and individuals communicate their ideas through clean,
+                  professional and user-focused visuals.
                 </p>
                 <p>
                   I combine creativity with modern AI-powered tools to streamline workflows, generate
