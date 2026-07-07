@@ -9,10 +9,6 @@ export const RESUME_URL =
 export const socials = {
   email: "usamakhatri150@gmail.com",
   linkedin: "https://www.linkedin.com/in/usama-muhammad-hussain-81711935b/",
-  youtube: "https://www.youtube.com/@UsamaKhatriStudio",
-  facebook: "https://www.facebook.com/profile.php?id=61591117551374",
-  instagram: "https://www.instagram.com/usamakhatristudio/",
-  tiktok: "https://www.tiktok.com/@usamakhatri.studio",
 };
 
 export type ProjectCategory = "Branding" | "UI/UX";
@@ -72,18 +68,5 @@ export const projects: Project[] = [
       "A clean and user-friendly mobile login experience. A simple, intuitive interface letting users sign in or create an account without confusion. The process covered research, wireframing and UI development — minimal modern design, clear user flow, consistent components and a mobile-friendly layout.",
     link: "https://www.figma.com/proto/fjXXJCU837LMt5ixEQ0aRr/Login-UI?node-id=1-51&page-id=0%3A1&starting-point-node-id=1%3A11&t=tTfMWl5PGRlsBSyE-1",
     linkLabel: "Open Figma Prototype",
-  },
-];
-
-export const videos = [
-  {
-    id: "wWdwkyhjzi4",
-    title: "Canva Shortcut Keys",
-    url: "https://youtube.com/shorts/wWdwkyhjzi4",
-  },
-  {
-    id: "u9Zu78r1cus",
-    title: "Bad Design vs Good Design",
-    url: "https://youtube.com/shorts/u9Zu78r1cus",
   },
 ];
