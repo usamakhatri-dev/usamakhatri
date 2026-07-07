@@ -37,15 +37,15 @@ export function Hero() {
         >
           <span className="inline-flex items-center gap-2 rounded-full border border-border bg-secondary/50 px-4 py-1.5 text-sm font-medium text-muted-foreground backdrop-blur">
             <Sparkles className="h-4 w-4 text-brand-cyan" />
-            AI-Powered Designer & Content Creator
+            AI-Powered Graphic & UI/UX Designer
           </span>
 
           <h1 className="mt-6 text-5xl font-extrabold leading-[1.05] sm:text-6xl lg:text-7xl">
             Usama Khatri
           </h1>
           <p className="mt-4 text-balance text-xl font-semibold text-muted-foreground sm:text-2xl">
-            AI-Powered Graphic Designer,{" "}
-            <span className="text-gradient">UI/UX Designer</span> &amp; Content Creator
+            AI-Powered Graphic Designer &amp;{" "}
+            <span className="text-gradient">UI/UX Designer</span>
           </p>
 
           <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
