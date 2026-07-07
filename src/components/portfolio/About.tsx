@@ -1,49 +1,10 @@
-import { useEffect, useRef, useState } from "react";
-import { useInView } from "motion/react";
-import { Briefcase, Layout, Share2, Sparkles } from "lucide-react";
 import { Reveal } from "./Reveal";
-
-const stats = [
-  { icon: Briefcase, value: 2, suffix: "+", label: "Branding Projects" },
-  { icon: Layout, value: 1, suffix: "", label: "UI/UX App Project" },
-  { icon: Share2, value: 12, suffix: "+", label: "Social Media Designs" },
-  { icon: Sparkles, value: 100, suffix: "%", label: "AI-Powered Workflow" },
-];
-
-function Counter({ value, suffix }: { value: number; suffix: string }) {
-  const ref = useRef<HTMLSpanElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-60px" });
-  const [n, setN] = useState(0);
-
-  useEffect(() => {
-    if (!inView) return;
-    let raf = 0;
-    const start = performance.now();
-    const dur = 1400;
-    const tick = (now: number) => {
-      const p = Math.min(1, (now - start) / dur);
-      const eased = 1 - Math.pow(1 - p, 3);
-      setN(Math.round(eased * value));
-      if (p < 1) raf = requestAnimationFrame(tick);
-    };
-    raf = requestAnimationFrame(tick);
-    return () => cancelAnimationFrame(raf);
-  }, [inView, value]);
-
-  return (
-    <span ref={ref}>
-      {n}
-      {suffix}
-    </span>
-  );
-}
 
 export function About() {
   return (
     <section id="about" className="relative py-24 sm:py-28">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
-        <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
-          <Reveal>
+        <Reveal>
             <div>
               <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand-cyan">
                 About Me
@@ -52,7 +13,7 @@ export function About() {
                 Turning Ideas Into{" "}
                 <span className="text-gradient">Visual Experiences</span>
               </h2>
-              <div className="mt-6 space-y-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
+              <div className="mt-6 max-w-3xl space-y-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
                 <p>
                   Hi, I'm Usama Khatri, an AI-Powered Graphic Designer and UI/UX Designer
                   passionate about creating designs that are both visually appealing and
@@ -69,25 +30,7 @@ export function About() {
                 </p>
               </div>
             </div>
-          </Reveal>
-
-          <Reveal delay={0.15}>
-            <div className="grid grid-cols-2 gap-4">
-              {stats.map((s) => (
-                <div
-                  key={s.label}
-                  className="glass-card rounded-2xl p-6 transition-transform duration-300 hover:-translate-y-1"
-                >
-                  <s.icon className="h-7 w-7 text-brand" />
-                  <p className="mt-4 font-display text-4xl font-extrabold">
-                    <Counter value={s.value} suffix={s.suffix} />
-                  </p>
-                  <p className="mt-1 text-sm text-muted-foreground">{s.label}</p>
-                </div>
-              ))}
-            </div>
-          </Reveal>
-        </div>
+        </Reveal>
       </div>
     </section>
   );
