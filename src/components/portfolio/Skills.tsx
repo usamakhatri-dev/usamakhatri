@@ -24,7 +24,6 @@ const groups = [
       "Visual Hierarchy",
       "UI Design",
       "UX Design",
-      "Content Creation",
     ],
   },
 ];

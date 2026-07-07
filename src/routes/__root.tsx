@@ -81,7 +81,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "Usama Khatri is an AI-powered graphic designer, UI/UX designer and content creator specializing in branding, social media design and modern product interfaces.",
+          "Usama Khatri is an AI-powered graphic designer and UI/UX designer specializing in branding, social media design and modern product interfaces.",
       },
       { name: "author", content: "Usama Khatri" },
       { name: "theme-color", content: "#0d1117" },
@@ -90,9 +90,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:card", content: "summary_large_image" },
       { property: "og:title", content: "Usama Khatri — AI-Powered Graphic & UI/UX Designer" },
       { name: "twitter:title", content: "Usama Khatri — AI-Powered Graphic & UI/UX Designer" },
-      { name: "description", content: "A modern, professional portfolio showcasing AI-powered graphic design, UI/UX, and content creation." },
-      { property: "og:description", content: "A modern, professional portfolio showcasing AI-powered graphic design, UI/UX, and content creation." },
-      { name: "twitter:description", content: "A modern, professional portfolio showcasing AI-powered graphic design, UI/UX, and content creation." },
+      { name: "description", content: "A modern, professional portfolio showcasing AI-powered graphic design and UI/UX work." },
+      { property: "og:description", content: "A modern, professional portfolio showcasing AI-powered graphic design and UI/UX work." },
+      { name: "twitter:description", content: "A modern, professional portfolio showcasing AI-powered graphic design and UI/UX work." },
       { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/nWWrXcERWrPzvxXh4dnjP3MKeH33/social-images/social-1782030097183-Screenshot_2026-06-21_132124.webp" },
       { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/nWWrXcERWrPzvxXh4dnjP3MKeH33/social-images/social-1782030097183-Screenshot_2026-06-21_132124.webp" },
     ],
