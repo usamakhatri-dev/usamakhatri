@@ -7,14 +7,13 @@ import { Hero } from "@/components/portfolio/Hero";
 import { About } from "@/components/portfolio/About";
 import { Services } from "@/components/portfolio/Services";
 import { Projects } from "@/components/portfolio/Projects";
-import { ContentCreator } from "@/components/portfolio/ContentCreator";
 import { Skills } from "@/components/portfolio/Skills";
 import { WhyMe } from "@/components/portfolio/WhyMe";
 import { Contact } from "@/components/portfolio/Contact";
 import { Footer } from "@/components/portfolio/Footer";
 
 const DESC =
-  "Portfolio of Usama Khatri — AI-powered graphic designer, UI/UX designer and content creator specializing in branding, social media design and modern product interfaces.";
+  "Portfolio of Usama Khatri — AI-powered graphic designer and UI/UX designer specializing in branding, social media design and modern product interfaces.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -35,13 +34,11 @@ export const Route = createFileRoute("/")({
           "@context": "https://schema.org",
           "@type": "Person",
           name: "Usama Khatri",
-          jobTitle: "AI-Powered Graphic Designer, UI/UX Designer & Content Creator",
+          jobTitle: "AI-Powered Graphic Designer & UI/UX Designer",
           email: "mailto:usamakhatri150@gmail.com",
           url: "/",
           sameAs: [
             "https://www.linkedin.com/in/usama-muhammad-hussain-81711935b/",
-            "https://www.youtube.com/@UsamaKhatriStudio",
-            "https://www.instagram.com/usamakhatristudio/",
             "https://www.behance.net/",
           ],
         }),
@@ -93,7 +90,6 @@ function Index() {
         <About />
         <Services />
         <Projects />
-        <ContentCreator />
         <Skills />
         <WhyMe />
         <Contact />
