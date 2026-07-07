@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
-import { ArrowDown, Download, MessageCircle, Sparkles } from "lucide-react";
+import { ArrowDown, Download, Mail, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { RESUME_URL } from "@/lib/portfolio-data";
+import { RESUME_URL, socials } from "@/lib/portfolio-data";
 import heroBg from "@/assets/hero-bg.jpg";
 
 export function Hero() {
@@ -66,8 +66,8 @@ export function Hero() {
               </a>
             </Button>
             <Button asChild variant="outline" size="xl">
-              <a href="#contact">
-                <MessageCircle className="h-4 w-4" /> Let's Talk
+              <a href={`mailto:${socials.email}`}>
+                <Mail className="h-4 w-4" /> {socials.email}
               </a>
             </Button>
           </div>
