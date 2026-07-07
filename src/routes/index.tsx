@@ -5,10 +5,7 @@ import { Toaster } from "@/components/ui/sonner";
 import { Navbar } from "@/components/portfolio/Navbar";
 import { Hero } from "@/components/portfolio/Hero";
 import { About } from "@/components/portfolio/About";
-import { Services } from "@/components/portfolio/Services";
 import { Projects } from "@/components/portfolio/Projects";
-import { Skills } from "@/components/portfolio/Skills";
-import { WhyMe } from "@/components/portfolio/WhyMe";
 import { Contact } from "@/components/portfolio/Contact";
 import { Footer } from "@/components/portfolio/Footer";
 
@@ -88,10 +85,7 @@ function Index() {
       <main>
         <Hero />
         <About />
-        <Services />
         <Projects />
-        <Skills />
-        <WhyMe />
         <Contact />
       </main>
       <Footer />
