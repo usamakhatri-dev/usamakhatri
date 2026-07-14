@@ -1,22 +1,21 @@
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
-import { ArrowUpRight, Expand } from "lucide-react";
+import { ArrowUpRight, Expand, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
-import { cn } from "@/lib/utils";
 import { projects, type Project } from "@/lib/portfolio-data";
 import { Reveal } from "./Reveal";
 
-const filters = ["All", "UI/UX"] as const;
+const placeholderCards = [
+  { id: "p1", label: "AI Website 01", title: "AI SaaS Landing Page", tag: "Web Design" },
+  { id: "p2", label: "Mobile App 01", title: "AI Mobile App UI", tag: "Mobile App" },
+  { id: "p3", label: "Dashboard 01", title: "AI Analytics Dashboard", tag: "UI/UX" },
+  { id: "p4", label: "AI Product 01", title: "AI Product Design Case Study", tag: "AI Product" },
+];
 
 export function Projects() {
-  const [active, setActive] = useState<(typeof filters)[number]>("All");
   const [preview, setPreview] = useState<Project | null>(null);
-
-  const visible = useMemo(
-    () => (active === "All" ? projects : projects.filter((p) => p.category === active)),
-    [active],
-  );
+  const hasProjects = projects.length > 0;
 
   return (
     <section id="work" className="relative py-24 sm:py-28">
@@ -27,31 +26,15 @@ export function Projects() {
               My <span className="text-gradient">Work</span>
             </h2>
             <p className="mt-4 text-base text-muted-foreground sm:text-lg">
-              A growing collection of branding systems and product design — more projects on the way.
+              A growing collection of AI website, mobile app, and UI/UX design work — new
+              case studies coming soon.
             </p>
           </div>
         </Reveal>
 
-        <div className="mt-10 flex flex-wrap justify-center gap-2">
-          {filters.map((f) => (
-            <button
-              key={f}
-              onClick={() => setActive(f)}
-              className={cn(
-                "rounded-full border px-5 py-2 text-sm font-semibold transition-all",
-                active === f
-                  ? "border-transparent bg-gradient-brand text-primary-foreground shadow-[var(--shadow-glow)]"
-                  : "border-border text-muted-foreground hover:border-brand/40 hover:text-foreground",
-              )}
-            >
-              {f}
-            </button>
-          ))}
-        </div>
-
         <motion.div layout className="mt-14 grid gap-7 md:grid-cols-2 xl:gap-8">
           <AnimatePresence mode="popLayout">
-            {visible.map((p) => (
+            {hasProjects && projects.map((p) => (
               <motion.article
                 key={p.id}
                 layout
@@ -102,6 +85,51 @@ export function Projects() {
                     </Button>
                     <Button variant="ghost" size="sm" onClick={() => setPreview(p)}>
                       Quick view
+                    </Button>
+                  </div>
+                </div>
+              </motion.article>
+            ))}
+
+            {!hasProjects && placeholderCards.map((p, i) => (
+              <motion.article
+                key={p.id}
+                layout
+                initial={{ opacity: 0, y: 24, scale: 0.97 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                transition={{ duration: 0.45, delay: i * 0.05, ease: [0.22, 1, 0.36, 1] }}
+                className="group relative flex flex-col overflow-hidden rounded-3xl border border-border bg-card shadow-card transition-all duration-500 hover:-translate-y-1.5 hover:border-brand/40 hover:shadow-[var(--shadow-glow)]"
+              >
+                <div className="relative aspect-[4/3] w-full overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-brand opacity-20" />
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,color-mix(in_oklab,var(--brand)_30%,transparent),transparent_60%),radial-gradient(circle_at_80%_70%,color-mix(in_oklab,var(--brand-violet)_30%,transparent),transparent_60%)]" />
+                  <div className="absolute inset-0 grid place-items-center">
+                    <div className="flex flex-col items-center gap-3 text-center">
+                      <span className="grid h-14 w-14 place-items-center rounded-2xl bg-background/70 backdrop-blur">
+                        <Sparkles className="h-6 w-6 text-brand-cyan" />
+                      </span>
+                      <span className="rounded-full bg-background/70 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-brand-cyan backdrop-blur">
+                        Coming Soon
+                      </span>
+                    </div>
+                  </div>
+                  <span className="absolute left-4 top-4 inline-flex rounded-full bg-background/70 px-3 py-1 text-xs font-semibold text-brand-cyan backdrop-blur">
+                    {p.label}
+                  </span>
+                </div>
+
+                <div className="flex flex-1 flex-col p-6 sm:p-7">
+                  <span className="inline-flex w-fit rounded-full bg-secondary px-3 py-1 text-xs font-semibold uppercase tracking-wide text-brand-cyan">
+                    {p.tag}
+                  </span>
+                  <h3 className="mt-4 text-xl font-bold leading-snug sm:text-2xl">{p.title}</h3>
+                  <p className="mt-3 line-clamp-3 text-sm leading-relaxed text-muted-foreground">
+                    A new AI-powered {p.tag.toLowerCase()} case study is on the way — full
+                    design breakdown, UI/UX flow, and live preview coming soon.
+                  </p>
+                  <div className="mt-6 flex items-center gap-3 pt-1">
+                    <Button variant="hero" size="sm" disabled>
+                      Coming Soon
                     </Button>
                   </div>
                 </div>
