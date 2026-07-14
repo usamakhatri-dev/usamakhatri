@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 import { projects, type Project } from "@/lib/portfolio-data";
 import { Reveal } from "./Reveal";
 
-const filters = ["All", "Branding", "UI/UX"] as const;
+const filters = ["All", "UI/UX"] as const;
 
 export function Projects() {
   const [active, setActive] = useState<(typeof filters)[number]>("All");
