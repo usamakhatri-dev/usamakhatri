@@ -77,22 +77,26 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Usama Khatri — AI-Powered Graphic & UI/UX Designer" },
+      { title: "Usama Khatri — AI Website, Mobile App & UI/UX Designer" },
       {
         name: "description",
         content:
-          "Usama Khatri is an AI-powered graphic designer and UI/UX designer specializing in branding, social media design and modern product interfaces.",
+          "Usama Khatri is an AI Website Designer, AI Mobile App Designer, and UI/UX Designer building modern landing pages, dashboards, SaaS interfaces, and AI-powered digital products.",
+      },
+      {
+        name: "keywords",
+        content:
+          "AI Website Designer, AI Mobile App Designer, UI/UX Designer, Website Designer, Mobile App Designer, Landing Page Designer, Dashboard Designer, AI Product Designer, Figma, Framer, SaaS Design",
       },
       { name: "author", content: "Usama Khatri" },
       { name: "theme-color", content: "#0d1117" },
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "Usama Khatri" },
       { name: "twitter:card", content: "summary_large_image" },
-      { property: "og:title", content: "Usama Khatri — AI-Powered Graphic & UI/UX Designer" },
-      { name: "twitter:title", content: "Usama Khatri — AI-Powered Graphic & UI/UX Designer" },
-      { name: "description", content: "A modern, professional portfolio showcasing AI-powered graphic design and UI/UX work." },
-      { property: "og:description", content: "A modern, professional portfolio showcasing AI-powered graphic design and UI/UX work." },
-      { name: "twitter:description", content: "A modern, professional portfolio showcasing AI-powered graphic design and UI/UX work." },
+      { property: "og:title", content: "Usama Khatri — AI Website, Mobile App & UI/UX Designer" },
+      { name: "twitter:title", content: "Usama Khatri — AI Website, Mobile App & UI/UX Designer" },
+      { property: "og:description", content: "Portfolio of an AI Website Designer, AI Mobile App Designer, and UI/UX Designer crafting modern AI-powered digital products." },
+      { name: "twitter:description", content: "Portfolio of an AI Website Designer, AI Mobile App Designer, and UI/UX Designer crafting modern AI-powered digital products." },
       { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/nWWrXcERWrPzvxXh4dnjP3MKeH33/social-images/social-1782030097183-Screenshot_2026-06-21_132124.webp" },
       { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/nWWrXcERWrPzvxXh4dnjP3MKeH33/social-images/social-1782030097183-Screenshot_2026-06-21_132124.webp" },
     ],

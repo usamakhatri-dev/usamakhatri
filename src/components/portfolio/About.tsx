@@ -10,23 +10,24 @@ export function About() {
                 About Me
               </p>
               <h2 className="mt-3 text-3xl font-extrabold sm:text-4xl lg:text-5xl">
-                Turning Ideas Into{" "}
-                <span className="text-gradient">Visual Experiences</span>
+                Designing Modern{" "}
+                <span className="text-gradient">AI-Powered Products</span>
               </h2>
               <div className="mt-6 max-w-3xl space-y-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
                 <p>
-                  Hi, I'm Usama Khatri, an AI-Powered Graphic Designer and UI/UX Designer
-                  passionate about creating designs that are both visually appealing and
-                  strategically effective.
+                  Hi, I'm Usama Khatri — an AI Website Designer, Mobile App Designer, and
+                  UI/UX Designer focused on building modern digital products that feel
+                  intuitive, responsive, and premium.
                 </p>
                 <p>
-                  My expertise includes branding, social media design, and UI/UX design,
-                  helping businesses and individuals communicate their ideas through clean,
-                  professional and user-focused visuals.
+                  I specialize in designing websites, mobile apps, landing pages, dashboards,
+                  and SaaS interfaces using UI/UX best practices — from research and
+                  wireframing to prototyping and high-fidelity design systems.
                 </p>
                 <p>
-                  I combine creativity with modern AI-powered tools to streamline workflows, generate
-                  ideas faster, and deliver high-quality results efficiently.
+                  My workflow is powered by AI. Tools like Figma, Framer, Claude, and Lovable
+                  let me move from idea to interface faster, ship cleaner user experiences,
+                  and deliver AI-assisted product design that scales.
                 </p>
               </div>
             </div>

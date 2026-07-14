@@ -10,17 +10,17 @@ import { Contact } from "@/components/portfolio/Contact";
 import { Footer } from "@/components/portfolio/Footer";
 
 const DESC =
-  "Portfolio of Usama Khatri — AI-powered graphic designer and UI/UX designer specializing in branding, social media design and modern product interfaces.";
+  "Portfolio of Usama Khatri — AI Website Designer, AI Mobile App Designer, and UI/UX Designer building landing pages, dashboards, SaaS interfaces, and AI-powered digital products.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Usama Khatri — AI-Powered Graphic & UI/UX Designer" },
+      { title: "Usama Khatri — AI Website, Mobile App & UI/UX Designer" },
       { name: "description", content: DESC },
-      { property: "og:title", content: "Usama Khatri — AI-Powered Graphic & UI/UX Designer" },
+      { property: "og:title", content: "Usama Khatri — AI Website, Mobile App & UI/UX Designer" },
       { property: "og:description", content: DESC },
       { property: "og:url", content: "/" },
-      { name: "twitter:title", content: "Usama Khatri — AI-Powered Graphic & UI/UX Designer" },
+      { name: "twitter:title", content: "Usama Khatri — AI Website, Mobile App & UI/UX Designer" },
       { name: "twitter:description", content: DESC },
     ],
     links: [{ rel: "canonical", href: "/" }],
@@ -31,7 +31,7 @@ export const Route = createFileRoute("/")({
           "@context": "https://schema.org",
           "@type": "Person",
           name: "Usama Khatri",
-          jobTitle: "AI-Powered Graphic Designer & UI/UX Designer",
+          jobTitle: "AI Website Designer, AI Mobile App Designer & UI/UX Designer",
           email: "mailto:usamakhatri150@gmail.com",
           url: "/",
           sameAs: [

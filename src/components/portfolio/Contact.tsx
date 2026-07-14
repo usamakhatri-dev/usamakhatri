@@ -14,8 +14,8 @@ export function Contact() {
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeading
           eyebrow="Contact"
-          title={<>Let's Work <span className="text-gradient">Together</span></>}
-          subtitle="Whether you need branding, social media design, or UI/UX design, I'd love to hear about your project. Reach out and let's create something great."
+          title={<>Let's Build Your Next <span className="text-gradient">AI Product</span></>}
+          subtitle="Websites, mobile apps, landing pages, dashboards, or full UI/UX design systems — if you're shipping an AI-powered digital product, I'd love to help design it."
         />
 
         <div className="mx-auto mt-14 grid max-w-xl gap-3 sm:grid-cols-2">
