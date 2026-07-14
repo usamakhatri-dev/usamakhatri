@@ -1,6 +1,3 @@
-import wearon from "@/assets/project-wearon.jpg";
-import scented from "@/assets/project-scented.jpg";
-import nexora from "@/assets/project-nexora.jpg";
 import loginui from "@/assets/project-loginui.jpg";
 import cityvoice from "@/assets/project-cityvoice.jpg";
 
@@ -26,39 +23,6 @@ export interface Project {
 }
 
 export const projects: Project[] = [
-  {
-    id: "wearon",
-    title: "WEARON — Men's Fashion Brand Identity",
-    category: "Branding",
-    label: "Branding 01",
-    image: wearon,
-    description:
-      "WEARON is a modern men's fashion brand focused on everyday essentials — pants, shirts, t-shirts and uppers. A bold, confident and versatile identity reflecting strength, style and simplicity, covering logo design, a full visual identity system and realistic mockups. Core values: confidence, simplicity, strength and modern style.",
-    link: "https://www.behance.net/gallery/244043213/WEARON-Mens-Fashion-Brand-Identity",
-    linkLabel: "View on Behance",
-  },
-  {
-    id: "scented",
-    title: "Scented Soul — Luxury Perfume Brand Identity",
-    category: "Branding",
-    label: "Branding 02",
-    image: scented,
-    description:
-      "A luxury perfume brand designed to reflect elegance, depth and a premium sensory experience. Crafted with Adobe Illustrator, Photoshop and AI-powered tools, it includes logo & identity design, bottle mockups, promotional visuals, social creatives and a refined luxury palette — moody, timeless and emotionally appealing.",
-    link: "https://www.behance.net/gallery/243717711/Scented-Soul-Luxury-Perfume-Brand-Identity",
-    linkLabel: "View on Behance",
-  },
-  {
-    id: "nexora",
-    title: "NEXORA — Software Company Branding",
-    category: "Branding",
-    label: "Branding 03",
-    image: nexora,
-    description:
-      "A modern software company delivering future-ready digital solutions. A clean, minimal and tech-driven identity built around a unique 'N' + 'X' mark symbolizing next-gen innovation and excellence. Includes logo variations, brand guidelines and real-world mockups — signage, billboard, laptop, mug and app icon.",
-    link: "https://www.behance.net/gallery/247043379/NEXORA-Software-Company-Branding",
-    linkLabel: "View on Behance",
-  },
   {
     id: "loginui",
     title: "Mobile Login UI Design",
