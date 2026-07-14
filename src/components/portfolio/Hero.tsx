@@ -1,7 +1,8 @@
 import { motion } from "motion/react";
 import { ArrowDown, Download, Mail, Sparkles } from "lucide-react";
+import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
-import { RESUME_URL, socials } from "@/lib/portfolio-data";
+import { socials } from "@/lib/portfolio-data";
 import heroBg from "@/assets/hero-bg.jpg";
 
 export function Hero() {
@@ -37,21 +38,21 @@ export function Hero() {
         >
           <span className="inline-flex items-center gap-2 rounded-full border border-border bg-secondary/50 px-4 py-1.5 text-sm font-medium text-muted-foreground backdrop-blur">
             <Sparkles className="h-4 w-4 text-brand-cyan" />
-            AI-Powered Graphic & UI/UX Designer
+            AI Website, Mobile App & UI/UX Designer
           </span>
 
           <h1 className="mt-6 text-5xl font-extrabold leading-[1.05] sm:text-6xl lg:text-7xl">
             Usama Khatri
           </h1>
           <p className="mt-4 text-balance text-xl font-semibold text-muted-foreground sm:text-2xl">
-            AI-Powered Graphic Designer &amp;{" "}
-            <span className="text-gradient">UI/UX Designer</span>
+            AI Website &amp; Mobile App Designer —{" "}
+            <span className="text-gradient">UI/UX & AI Product Designer</span>
           </p>
 
           <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-            I create impactful brand identities, engaging social media designs, and modern UI/UX
-            experiences using creative and AI-powered workflows. My goal is to help businesses and
-            individuals communicate their ideas through clean, professional, and user-focused design.
+            I design modern AI-powered websites, mobile apps, landing pages, dashboards, and SaaS
+            interfaces. Blending UI/UX best practices with AI-assisted workflows, I help teams ship
+            responsive, user-focused digital products faster.
           </p>
 
           <div className="mt-9 flex flex-wrap items-center gap-3">
@@ -60,10 +61,17 @@ export function Hero() {
                 View My Work <ArrowDown className="h-4 w-4" />
               </a>
             </Button>
-            <Button asChild variant="glow" size="xl">
-              <a href={RESUME_URL} target="_blank" rel="noopener noreferrer">
-                <Download className="h-4 w-4" /> Download Resume
-              </a>
+            <Button
+              variant="glow"
+              size="xl"
+              title="Resume will be available soon."
+              aria-disabled="true"
+              onClick={(e) => {
+                e.preventDefault();
+                toast.info("Resume will be available soon.");
+              }}
+            >
+              <Download className="h-4 w-4" /> Download Resume
             </Button>
             <Button asChild variant="outline" size="xl">
               <a href={`mailto:${socials.email}`}>
