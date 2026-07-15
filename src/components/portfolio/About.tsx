@@ -29,6 +29,19 @@ export function About() {
                   let me move from idea to interface faster, ship cleaner user experiences,
                   and deliver AI-assisted product design that scales.
                 </p>
+                <p>
+                  Right now, I'm focused on designing AI-powered websites and mobile
+                  applications, and actively shipping real-world products like{" "}
+                  <a
+                    href="https://cityvoice-demo.netlify.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-brand-cyan underline-offset-4 hover:underline"
+                  >
+                    CityVoice
+                  </a>
+                  {" "}— an AI civic reporting platform built to solve real community problems.
+                </p>
               </div>
             </div>
         </Reveal>
