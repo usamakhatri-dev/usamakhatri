@@ -8,6 +8,7 @@ import { About } from "@/components/portfolio/About";
 import { Projects } from "@/components/portfolio/Projects";
 import { Contact } from "@/components/portfolio/Contact";
 import { Footer } from "@/components/portfolio/Footer";
+import profileAsset from "@/assets/usama-profile.png.asset.json";
 
 const DESC =
   "Portfolio of Usama Khatri — AI Website Designer, AI Mobile App Designer, and UI/UX Designer building landing pages, dashboards, SaaS interfaces, and AI-powered digital products.";
@@ -50,22 +51,46 @@ function Loader() {
     <motion.div
       initial={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 0.6, ease: "easeInOut" }}
       className="fixed inset-0 z-[100] grid place-items-center bg-background"
     >
-      <div className="flex flex-col items-center gap-5">
-        <div className="grid h-16 w-16 animate-float-slow place-items-center rounded-2xl bg-gradient-brand text-xl font-extrabold text-primary-foreground">
-          UK
-        </div>
-        <div className="h-1 w-40 overflow-hidden rounded-full bg-secondary">
+      <motion.div
+        initial={{ opacity: 0, y: 8 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+        className="flex flex-col items-center gap-6"
+      >
+        <div className="relative h-20 w-20">
           <motion.div
-            className="h-full w-1/2 bg-gradient-brand"
-            initial={{ x: "-100%" }}
-            animate={{ x: "200%" }}
-            transition={{ repeat: Infinity, duration: 1, ease: "easeInOut" }}
+            aria-hidden
+            className="absolute inset-0 rounded-full border border-brand/25"
+            animate={{ scale: [1, 1.15, 1], opacity: [0.6, 0, 0.6] }}
+            transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut" }}
+          />
+          <motion.div
+            aria-hidden
+            className="absolute inset-0 rounded-full border border-brand/20"
+            animate={{ scale: [1, 1.3, 1], opacity: [0.4, 0, 0.4] }}
+            transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut", delay: 0.4 }}
+          />
+          <img
+            src={profileAsset.url}
+            alt="Usama Khatri"
+            width={80}
+            height={80}
+            className="relative h-20 w-20 rounded-full object-cover ring-2 ring-brand/40"
+            style={{ objectPosition: "50% 15%" }}
           />
         </div>
-      </div>
+        <div className="h-px w-24 overflow-hidden rounded-full bg-border">
+          <motion.div
+            className="h-full w-1/3 bg-foreground/60"
+            initial={{ x: "-100%" }}
+            animate={{ x: "300%" }}
+            transition={{ repeat: Infinity, duration: 1.4, ease: "easeInOut" }}
+          />
+        </div>
+      </motion.div>
     </motion.div>
   );
 }
