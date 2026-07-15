@@ -1,5 +1,6 @@
 import { Linkedin, Mail } from "lucide-react";
 import { socials } from "@/lib/portfolio-data";
+import profileAsset from "@/assets/usama-profile.png.asset.json";
 
 const icons = [
   { icon: Linkedin, href: socials.linkedin, label: "LinkedIn" },
@@ -11,9 +12,16 @@ export function Footer() {
     <footer className="border-t border-border py-12">
       <div className="mx-auto max-w-7xl px-5 text-center sm:px-8">
         <a href="#home" className="inline-flex items-center gap-2 font-display text-xl font-extrabold">
-          <span className="grid h-9 w-9 place-items-center rounded-xl bg-gradient-brand text-sm text-primary-foreground">
-            UK
-          </span>
+          <img
+            src={profileAsset.url}
+            alt="Usama Khatri"
+            width={36}
+            height={36}
+            loading="lazy"
+            decoding="async"
+            className="h-9 w-9 shrink-0 rounded-full object-cover ring-2 ring-brand/40"
+            style={{ objectPosition: "50% 15%" }}
+          />
           Usama Khatri
         </a>
         <p className="mx-auto mt-4 max-w-md text-balance text-muted-foreground">
