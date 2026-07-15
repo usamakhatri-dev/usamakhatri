@@ -6,6 +6,8 @@ export const socials = {
   linkedin: "https://www.linkedin.com/in/usama-muhammad-hussain-81711935b/",
 };
 
+import cityvoice from "@/assets/project-cityvoice.jpg";
+
 export type ProjectCategory = "UI/UX" | "Web Design" | "Mobile App";
 
 export interface Project {
@@ -19,4 +21,16 @@ export interface Project {
   linkLabel: string;
 }
 
-export const projects: Project[] = [];
+export const projects: Project[] = [
+  {
+    id: "cityvoice",
+    title: "CityVoice — AI Civic Reporting Platform",
+    category: "UI/UX",
+    label: "Featured 01",
+    image: cityvoice,
+    description:
+      "CityVoice is an AI-powered civic issue reporting platform that helps citizens report public infrastructure and municipal problems — road damage, garbage, water leakage, sewerage overflow, street light failures, and flooding. Designed with location-based reporting, progress tracking, and a modern mobile-first interface to bridge citizens and government departments.",
+    link: "https://cityvoice-demo.netlify.app/",
+    linkLabel: "Live Demo",
+  },
+];
