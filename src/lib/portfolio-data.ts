@@ -34,4 +34,15 @@ export const projects: Project[] = [
     link: "https://cityvoice-demo.netlify.app/",
     linkLabel: "Live Demo",
   },
+  {
+    id: "agentix-ai",
+    title: "Agentix AI",
+    category: "AI SaaS Website",
+    label: "Featured 02",
+    image: agentixAi,
+    description:
+      "Agentix AI is a modern AI SaaS website showcasing AI-powered solutions with a clean, premium, and fully responsive user interface. It features smooth animations, professional sections, and a conversion-focused design for businesses and startups.",
+    link: "https://agentix-ai-template.vercel.app/",
+    linkLabel: "Live Demo",
+  },
 ];
