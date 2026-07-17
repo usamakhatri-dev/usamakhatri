@@ -7,8 +7,9 @@ export const socials = {
 };
 
 import cityvoice from "@/assets/project-cityvoice.jpg";
+import agentixAi from "@/assets/project-agentix-ai.jpg";
 
-export type ProjectCategory = "UI/UX" | "Web Design" | "Mobile App";
+export type ProjectCategory = "UI/UX" | "Web Design" | "Mobile App" | "AI SaaS Website";
 
 export interface Project {
   id: string;
