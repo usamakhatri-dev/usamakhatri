@@ -10,7 +10,7 @@ const contactLinks = [
 
 export function Contact() {
   return (
-    <section id="contact" className="relative py-24 sm:py-28">
+    <section id="contact" className="relative py-28 sm:py-36">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeading
           eyebrow="Contact"
@@ -18,19 +18,19 @@ export function Contact() {
           subtitle="Websites, mobile apps, landing pages, dashboards, or full UI/UX design systems — if you're shipping an AI-powered digital product, I'd love to help design it."
         />
 
-        <div className="mx-auto mt-14 grid max-w-xl gap-3 sm:grid-cols-2">
+        <div className="mx-auto mt-16 grid max-w-xl gap-4 sm:grid-cols-2">
           {contactLinks.map((c) => (
             <Reveal key={c.label}>
               <a
                 href={c.href}
                 target={c.href.startsWith("mailto") ? undefined : "_blank"}
                 rel="noopener noreferrer"
-                className="group flex items-center gap-4 rounded-2xl border border-border bg-card p-4 shadow-card transition-all duration-300 hover:-translate-y-0.5 hover:border-brand/40"
+                className="group flex items-center gap-4 rounded-2xl border border-border/80 bg-card/70 p-5 shadow-card backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-brand/50 hover:shadow-[var(--shadow-glow)]"
               >
-                <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-gradient-brand text-primary-foreground">
+                <span className="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-gradient-brand text-primary-foreground shadow-md transition-transform duration-300 group-hover:scale-105">
                   <c.icon className="h-5 w-5" />
                 </span>
-                <span className="min-w-0 truncate font-medium text-muted-foreground transition-colors group-hover:text-foreground">
+                <span className="min-w-0 truncate text-sm font-semibold text-muted-foreground transition-colors group-hover:text-foreground sm:text-base">
                   {c.label}
                 </span>
               </a>
