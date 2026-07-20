@@ -18,21 +18,22 @@ export function Projects() {
   const hasProjects = projects.length > 0;
 
   return (
-    <section id="work" className="relative py-24 sm:py-28">
+    <section id="work" className="relative py-28 sm:py-36">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <Reveal>
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-3xl font-extrabold sm:text-4xl lg:text-5xl">
+            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.24em] text-brand-cyan">Selected Work</p>
+            <h2 className="text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
               My <span className="text-gradient">Work</span>
             </h2>
-            <p className="mt-4 text-base text-muted-foreground sm:text-lg">
+            <p className="mt-5 text-base leading-relaxed text-muted-foreground sm:text-lg">
               A growing collection of AI website, mobile app, and UI/UX design work — new
               case studies coming soon.
             </p>
           </div>
         </Reveal>
 
-        <motion.div layout className="mt-14 grid gap-7 md:grid-cols-2 xl:gap-8">
+        <motion.div layout className="mt-16 grid gap-8 md:grid-cols-2 xl:gap-10">
           <AnimatePresence mode="popLayout">
             {hasProjects && projects.map((p) => (
               <motion.article
