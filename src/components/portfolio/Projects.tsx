@@ -42,50 +42,71 @@ export function Projects() {
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.96 }}
                 transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-                className="group relative flex flex-col overflow-hidden rounded-3xl border border-border bg-card shadow-card transition-all duration-500 hover:-translate-y-1.5 hover:border-brand/40 hover:shadow-[var(--shadow-glow)]"
+                className="group relative flex flex-col overflow-hidden rounded-[28px] border border-border/70 glass-card shadow-card transition-all duration-[400ms] ease-out hover:-translate-y-2 hover:border-brand/50 hover:shadow-[var(--shadow-glow)]"
               >
+                <div className="pointer-events-none absolute -inset-px rounded-[28px] opacity-0 transition-opacity duration-500 group-hover:opacity-100" style={{ background: "linear-gradient(135deg, color-mix(in oklab, var(--brand) 25%, transparent), transparent 40%, color-mix(in oklab, var(--brand-violet) 25%, transparent))" }} aria-hidden />
+
                 <button
                   type="button"
                   onClick={() => setPreview(p)}
-                  className="relative block w-full overflow-hidden"
+                  className="relative block w-full overflow-hidden p-3 pb-0"
                   aria-label={`Preview ${p.title}`}
                 >
-                  <div className="overflow-hidden">
+                  <div className="relative overflow-hidden rounded-2xl">
                     <img
                       src={p.image}
                       alt={`${p.title} project mockup`}
                       width={1280}
                       height={960}
                       loading="lazy"
-                      className="aspect-[4/3] w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.07]"
+                      className="aspect-[4/3] w-full object-cover transition-transform duration-[600ms] ease-out group-hover:scale-[1.06]"
                     />
+                    <span className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent opacity-70" />
+                    <span className="absolute left-3 top-3 inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-background/60 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-brand-cyan backdrop-blur-md">
+                      <span className="h-1.5 w-1.5 rounded-full bg-brand-cyan" />
+                      {p.category}
+                    </span>
+                    <span className="absolute right-3 top-3 grid h-9 w-9 translate-y-1 place-items-center rounded-full border border-white/15 bg-background/60 opacity-0 backdrop-blur-md transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+                      <Expand className="h-4 w-4" />
+                    </span>
                   </div>
-                  <span className="absolute inset-0 bg-gradient-to-t from-background/85 via-background/20 to-transparent opacity-60 transition-opacity duration-500 group-hover:opacity-90" />
-                  <span className="absolute left-4 top-4 inline-flex rounded-full bg-background/70 px-3 py-1 text-xs font-semibold text-brand-cyan backdrop-blur">
-                    {p.label}
-                  </span>
-                  <span className="absolute right-4 top-4 grid h-10 w-10 translate-y-1 place-items-center rounded-full bg-background/70 opacity-0 backdrop-blur transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
-                    <Expand className="h-4 w-4" />
-                  </span>
                 </button>
 
                 <div className="flex flex-1 flex-col p-6 sm:p-7">
-                  <span className="inline-flex w-fit rounded-full bg-secondary px-3 py-1 text-xs font-semibold uppercase tracking-wide text-brand-cyan">
-                    {p.category}
-                  </span>
-                  <h3 className="mt-4 text-xl font-bold leading-snug sm:text-2xl">{p.title}</h3>
-                  <p className="mt-3 line-clamp-3 text-sm leading-relaxed text-muted-foreground">
+                  <h3 className="text-xl font-bold leading-snug tracking-tight sm:text-2xl">
+                    {p.title}
+                  </h3>
+                  <p className="mt-3 line-clamp-2 text-sm leading-relaxed text-muted-foreground">
                     {p.description}
                   </p>
-                  <div className="mt-6 flex items-center gap-3 pt-1">
-                    <Button asChild variant="hero" size="sm">
+
+                  {p.tech && p.tech.length > 0 && (
+                    <div className="mt-5 flex flex-wrap gap-2">
+                      {p.tech.map((t) => (
+                        <span
+                          key={t}
+                          className="rounded-full border border-border bg-secondary/60 px-2.5 py-1 text-[11px] font-medium text-muted-foreground backdrop-blur"
+                        >
+                          {t}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+
+                  <div className="mt-6 flex items-center justify-between gap-3 pt-1">
+                    <Button asChild variant="hero" size="sm" className="group/btn">
                       <a href={p.link} target="_blank" rel="noopener noreferrer">
-                        {p.linkLabel} <ArrowUpRight className="h-4 w-4" />
+                        {p.linkLabel}
+                        <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover/btn:-translate-y-0.5 group-hover/btn:translate-x-0.5" />
                       </a>
                     </Button>
-                    <Button variant="ghost" size="sm" onClick={() => setPreview(p)}>
+                    <button
+                      type="button"
+                      onClick={() => setPreview(p)}
+                      className="text-xs font-semibold uppercase tracking-wider text-muted-foreground transition-colors hover:text-foreground"
+                    >
                       Quick view
-                    </Button>
+                    </button>
                   </div>
                 </div>
               </motion.article>
