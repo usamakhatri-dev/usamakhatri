@@ -2,18 +2,18 @@ import { Reveal } from "./Reveal";
 
 export function About() {
   return (
-    <section id="about" className="relative py-24 sm:py-28">
+    <section id="about" className="relative py-28 sm:py-36">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <Reveal>
             <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand-cyan">
+              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-brand-cyan">
                 About Me
               </p>
-              <h2 className="mt-3 text-3xl font-extrabold sm:text-4xl lg:text-5xl">
+              <h2 className="mt-4 text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
                 Designing Modern{" "}
                 <span className="text-gradient">AI-Powered Products</span>
               </h2>
-              <div className="mt-6 max-w-3xl space-y-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
+              <div className="mt-8 max-w-3xl space-y-5 text-base leading-[1.8] text-muted-foreground sm:text-lg">
                 <p>
                   Hi, I'm Usama Khatri — an AI Website Designer, Mobile App Designer, and
                   UI/UX Designer focused on building modern digital products that feel
