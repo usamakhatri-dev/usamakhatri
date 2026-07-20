@@ -20,6 +20,7 @@ export interface Project {
   description: string;
   link: string;
   linkLabel: string;
+  tech?: string[];
 }
 
 export const projects: Project[] = [
@@ -33,6 +34,7 @@ export const projects: Project[] = [
       "CityVoice is an AI-powered civic issue reporting platform that helps citizens report public infrastructure and municipal problems — road damage, garbage, water leakage, sewerage overflow, street light failures, and flooding. Designed with location-based reporting, progress tracking, and a modern mobile-first interface to bridge citizens and government departments.",
     link: "https://cityvoice-demo.netlify.app/",
     linkLabel: "Live Demo",
+    tech: ["React", "Tailwind CSS", "AI", "Figma"],
   },
   {
     id: "agentix-ai",
@@ -44,5 +46,6 @@ export const projects: Project[] = [
       "Agentix AI is a modern AI SaaS website showcasing AI-powered solutions with a clean, premium, and fully responsive user interface. It features smooth animations, professional sections, and a conversion-focused design for businesses and startups.",
     link: "https://agentix-ai-template.vercel.app/",
     linkLabel: "Live Demo",
+    tech: ["Next.js", "Tailwind CSS", "Framer Motion", "TypeScript"],
   },
 ];
