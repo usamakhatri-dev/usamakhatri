@@ -9,7 +9,7 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="relative flex min-h-dvh items-center overflow-hidden pt-28 pb-16"
+      className="relative flex min-h-dvh items-center overflow-hidden pt-32 pb-24"
     >
       <img
         src={heroBg}
@@ -36,26 +36,26 @@ export function Hero() {
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           className="max-w-3xl"
         >
-          <span className="inline-flex items-center gap-2 rounded-full border border-border bg-secondary/50 px-4 py-1.5 text-sm font-medium text-muted-foreground backdrop-blur">
-            <Sparkles className="h-4 w-4 text-brand-cyan" />
+          <span className="inline-flex items-center gap-2 rounded-full border border-border/80 bg-secondary/40 px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-muted-foreground backdrop-blur-md shadow-sm">
+            <Sparkles className="h-3.5 w-3.5 text-brand-cyan" />
             AI Website, Mobile App & UI/UX Designer
           </span>
 
-          <h1 className="mt-6 text-5xl font-extrabold leading-[1.05] sm:text-6xl lg:text-7xl">
+          <h1 className="mt-8 text-5xl font-extrabold leading-[1.02] tracking-[-0.03em] sm:text-6xl lg:text-[5.25rem]">
             Usama Khatri
           </h1>
-          <p className="mt-4 text-balance text-xl font-semibold text-muted-foreground sm:text-2xl">
+          <p className="mt-5 text-balance text-xl font-semibold leading-snug text-muted-foreground sm:text-2xl">
             AI Website &amp; Mobile App Designer —{" "}
             <span className="text-gradient">UI/UX & AI Product Designer</span>
           </p>
 
-          <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
+          <p className="mt-7 max-w-2xl text-base leading-[1.75] text-muted-foreground sm:text-lg">
             I design modern AI-powered websites, mobile apps, landing pages, dashboards, and SaaS
             interfaces. Blending UI/UX best practices with AI-assisted workflows, I help teams ship
             responsive, user-focused digital products faster.
           </p>
 
-          <div className="mt-9 flex flex-wrap items-center gap-3">
+          <div className="mt-11 flex flex-wrap items-center gap-3.5">
             <Button asChild variant="hero" size="xl">
               <a href="#work">
                 View My Work <ArrowDown className="h-4 w-4" />
