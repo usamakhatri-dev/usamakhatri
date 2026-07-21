@@ -74,10 +74,10 @@ export function Projects() {
                 </button>
 
                 <div className="flex flex-1 flex-col p-6 sm:p-7">
-                  <h3 className="text-xl font-bold leading-snug tracking-tight sm:text-2xl">
+                  <h3 className="text-xl font-bold leading-[1.25] tracking-[-0.02em] sm:text-2xl">
                     {p.title}
                   </h3>
-                  <p className="mt-3 line-clamp-2 text-sm leading-relaxed text-muted-foreground">
+                  <p className="mt-3 line-clamp-2 max-w-prose text-sm leading-[1.7] text-muted-foreground/90">
                     {p.description}
                   </p>
 
@@ -86,7 +86,7 @@ export function Projects() {
                       {p.tech.map((t) => (
                         <span
                           key={t}
-                          className="rounded-full border border-border bg-secondary/60 px-2.5 py-1 text-[11px] font-medium text-muted-foreground backdrop-blur"
+                          className="rounded-full border border-border/70 bg-secondary/50 px-3 py-1 text-[11px] font-medium tracking-wide text-muted-foreground/90 backdrop-blur transition-colors hover:border-brand/40 hover:text-foreground"
                         >
                           {t}
                         </span>
