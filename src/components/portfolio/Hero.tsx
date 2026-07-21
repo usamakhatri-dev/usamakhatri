@@ -22,6 +22,11 @@ export function Hero() {
       <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/70 to-background" />
       <div
         aria-hidden
+        className="pointer-events-none absolute left-1/2 top-1/2 h-[720px] w-[720px] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-70"
+        style={{ background: "radial-gradient(closest-side, color-mix(in oklab, var(--brand) 22%, transparent), transparent 70%)" }}
+      />
+      <div
+        aria-hidden
         className="animate-pulse-glow absolute -left-32 top-24 h-80 w-80 rounded-full bg-brand/30 blur-[120px]"
       />
       <div
@@ -41,15 +46,15 @@ export function Hero() {
             AI Website, Mobile App & UI/UX Designer
           </span>
 
-          <h1 className="mt-8 text-5xl font-extrabold leading-[1.02] tracking-[-0.03em] sm:text-6xl lg:text-[5.25rem]">
+          <h1 className="mt-8 bg-gradient-to-b from-foreground to-foreground/80 bg-clip-text text-5xl font-extrabold leading-[1.02] tracking-[-0.035em] text-transparent sm:text-6xl lg:text-[5.5rem]">
             Usama Khatri
           </h1>
-          <p className="mt-5 text-balance text-xl font-semibold leading-snug text-muted-foreground sm:text-2xl">
+          <p className="mt-6 text-balance text-xl font-semibold leading-snug tracking-tight text-muted-foreground sm:text-2xl">
             AI Website &amp; Mobile App Designer —{" "}
             <span className="text-gradient">UI/UX & AI Product Designer</span>
           </p>
 
-          <p className="mt-7 max-w-2xl text-base leading-[1.75] text-muted-foreground sm:text-lg">
+          <p className="mt-7 max-w-[62ch] text-base leading-[1.8] text-muted-foreground/90 sm:text-lg">
             I design modern AI-powered websites, mobile apps, landing pages, dashboards, and SaaS
             interfaces. Blending UI/UX best practices with AI-assisted workflows, I help teams ship
             responsive, user-focused digital products faster.
