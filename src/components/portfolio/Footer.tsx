@@ -9,7 +9,8 @@ const icons = [
 
 export function Footer() {
   return (
-    <footer className="border-t border-border/70 py-16">
+    <footer className="relative border-t border-border/60 py-20">
+      <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-brand/40 to-transparent" />
       <div className="mx-auto max-w-7xl px-5 text-center sm:px-8">
         <a href="#home" className="inline-flex items-center gap-3 font-display text-xl font-extrabold tracking-tight">
           <img
