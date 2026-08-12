@@ -22,9 +22,9 @@ export function Projects() {
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <Reveal>
           <div className="mx-auto max-w-2xl text-center">
-            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.24em] text-brand-cyan">Selected Work</p>
+            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.24em] text-brand">Selected Work</p>
             <h2 className="text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
-              My <span className="text-gradient">Work</span>
+              My <span className="text-brand">Work</span>
             </h2>
             <p className="mt-5 text-base leading-relaxed text-muted-foreground sm:text-lg">
               A growing collection of AI website, mobile app, and UI/UX design work — new
@@ -43,10 +43,8 @@ export function Projects() {
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.96 }}
                 transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-                className="group relative flex flex-col overflow-hidden rounded-[28px] border border-border/70 glass-card shadow-card transition-all duration-[400ms] ease-out hover:-translate-y-2 hover:border-brand/50 hover:shadow-[var(--shadow-glow)]"
+                className="group relative flex flex-col overflow-hidden rounded-[28px] border border-border bg-card shadow-card transition-all duration-[400ms] ease-out hover:-translate-y-1.5 hover:border-brand/40 hover:shadow-[var(--shadow-glow)]"
               >
-                <div className="pointer-events-none absolute -inset-px rounded-[28px] opacity-0 transition-opacity duration-500 group-hover:opacity-100" style={{ background: "linear-gradient(135deg, color-mix(in oklab, var(--brand) 25%, transparent), transparent 40%, color-mix(in oklab, var(--brand-violet) 25%, transparent))" }} aria-hidden />
-
                 <button
                   type="button"
                   onClick={() => setPreview(p)}
@@ -62,12 +60,11 @@ export function Projects() {
                       loading="lazy"
                       className="aspect-[4/3] w-full object-cover transition-transform duration-[600ms] ease-out group-hover:scale-[1.06]"
                     />
-                    <span className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent opacity-70" />
-                    <span className="absolute left-3 top-3 inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-background/60 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-brand-cyan backdrop-blur-md">
-                      <span className="h-1.5 w-1.5 rounded-full bg-brand-cyan" />
+                    <span className="absolute left-3 top-3 inline-flex items-center gap-1.5 rounded-full border border-border bg-background/80 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-foreground/90 backdrop-blur-md">
+                      <span className="h-1.5 w-1.5 rounded-full bg-brand" />
                       {p.category}
                     </span>
-                    <span className="absolute right-3 top-3 grid h-9 w-9 translate-y-1 place-items-center rounded-full border border-white/15 bg-background/60 opacity-0 backdrop-blur-md transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+                    <span className="absolute right-3 top-3 grid h-9 w-9 translate-y-1 place-items-center rounded-full border border-border bg-background/80 opacity-0 backdrop-blur-md transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
                       <Expand className="h-4 w-4" />
                     </span>
                   </div>
@@ -86,7 +83,7 @@ export function Projects() {
                       {p.tech.map((t) => (
                         <span
                           key={t}
-                          className="rounded-full border border-border/70 bg-secondary/50 px-3 py-1 text-[11px] font-medium tracking-wide text-muted-foreground/90 backdrop-blur transition-colors hover:border-brand/40 hover:text-foreground"
+                          className="rounded-full border border-border bg-secondary/50 px-3 py-1 text-[11px] font-medium tracking-wide text-muted-foreground/90 transition-colors hover:border-brand/40 hover:text-foreground"
                         >
                           {t}
                         </span>
@@ -122,26 +119,24 @@ export function Projects() {
                 transition={{ duration: 0.45, delay: i * 0.05, ease: [0.22, 1, 0.36, 1] }}
                 className="group relative flex flex-col overflow-hidden rounded-3xl border border-border bg-card shadow-card transition-all duration-500 hover:-translate-y-1.5 hover:border-brand/40 hover:shadow-[var(--shadow-glow)]"
               >
-                <div className="relative aspect-[4/3] w-full overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-brand opacity-20" />
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,color-mix(in_oklab,var(--brand)_30%,transparent),transparent_60%),radial-gradient(circle_at_80%_70%,color-mix(in_oklab,var(--brand-violet)_30%,transparent),transparent_60%)]" />
+                <div className="relative aspect-[4/3] w-full overflow-hidden bg-secondary/40">
                   <div className="absolute inset-0 grid place-items-center">
                     <div className="flex flex-col items-center gap-3 text-center">
-                      <span className="grid h-14 w-14 place-items-center rounded-2xl bg-background/70 backdrop-blur">
-                        <Sparkles className="h-6 w-6 text-brand-cyan" />
+                      <span className="grid h-14 w-14 place-items-center rounded-2xl border border-border bg-background/70">
+                        <Sparkles className="h-6 w-6 text-brand" />
                       </span>
-                      <span className="rounded-full bg-background/70 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-brand-cyan backdrop-blur">
+                      <span className="rounded-full border border-border bg-background/70 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-muted-foreground">
                         Coming Soon
                       </span>
                     </div>
                   </div>
-                  <span className="absolute left-4 top-4 inline-flex rounded-full bg-background/70 px-3 py-1 text-xs font-semibold text-brand-cyan backdrop-blur">
+                  <span className="absolute left-4 top-4 inline-flex rounded-full border border-border bg-background/70 px-3 py-1 text-xs font-semibold text-muted-foreground">
                     {p.label}
                   </span>
                 </div>
 
                 <div className="flex flex-1 flex-col p-6 sm:p-7">
-                  <span className="inline-flex w-fit rounded-full bg-secondary px-3 py-1 text-xs font-semibold uppercase tracking-wide text-brand-cyan">
+                  <span className="inline-flex w-fit rounded-full bg-secondary px-3 py-1 text-xs font-semibold uppercase tracking-wide text-brand">
                     {p.tag}
                   </span>
                   <h3 className="mt-4 text-xl font-bold leading-snug sm:text-2xl">{p.title}</h3>

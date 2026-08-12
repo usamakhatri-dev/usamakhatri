@@ -32,7 +32,7 @@ export function Navbar() {
             height={36}
             loading="eager"
             decoding="async"
-            className="h-9 w-9 shrink-0 rounded-full object-cover object-top ring-2 ring-brand/40"
+            className="h-9 w-9 shrink-0 rounded-full object-cover object-top ring-1 ring-border"
             style={{ objectPosition: "50% 15%" }}
           />
           <span>Usama Khatri</span>

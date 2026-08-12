@@ -2,7 +2,7 @@ export const RESUME_URL =
   "https://drive.google.com/file/d/1sWhyhRta6DR6pIQ3nDBrHgjubEEXFTNX/view?usp=sharing";
 
 export const socials = {
-  email: "usamakhatri150@gmail.com",
+  email: "usamaakhatri@gmail.com",
   linkedin: "https://www.linkedin.com/in/usama-muhammad-hussain-81711935b/",
 };
 

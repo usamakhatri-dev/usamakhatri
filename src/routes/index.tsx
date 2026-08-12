@@ -33,7 +33,7 @@ export const Route = createFileRoute("/")({
           "@type": "Person",
           name: "Usama Khatri",
           jobTitle: "AI Website Designer, AI Mobile App Designer & UI/UX Designer",
-          email: "mailto:usamakhatri150@gmail.com",
+          email: "mailto:usamaakhatri@gmail.com",
           url: "/",
           sameAs: [
             "https://www.linkedin.com/in/usama-muhammad-hussain-81711935b/",
