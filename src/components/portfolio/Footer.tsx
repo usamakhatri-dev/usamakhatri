@@ -10,7 +10,7 @@ const icons = [
 export function Footer() {
   return (
     <footer className="relative border-t border-border/60 py-20">
-      <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-brand/40 to-transparent" />
+      <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-brand/25 to-transparent" />
       <div className="mx-auto max-w-7xl px-5 text-center sm:px-8">
         <a href="#home" className="inline-flex items-center gap-3 font-display text-xl font-extrabold tracking-tight">
           <img
@@ -20,7 +20,7 @@ export function Footer() {
             height={36}
             loading="lazy"
             decoding="async"
-            className="h-10 w-10 shrink-0 rounded-full object-cover ring-2 ring-brand/40 shadow-md"
+            className="h-10 w-10 shrink-0 rounded-full object-cover ring-1 ring-border"
             style={{ objectPosition: "50% 15%" }}
           />
           Usama Khatri
@@ -37,7 +37,7 @@ export function Footer() {
               target={s.href.startsWith("mailto") ? undefined : "_blank"}
               rel="noopener noreferrer"
               aria-label={s.label}
-              className="grid h-12 w-12 place-items-center rounded-full border border-border/80 bg-card/40 text-muted-foreground backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-brand/50 hover:text-foreground hover:shadow-[var(--shadow-glow)]"
+              className="grid h-12 w-12 place-items-center rounded-full border border-border bg-card text-muted-foreground transition-all duration-300 hover:-translate-y-0.5 hover:border-brand/40 hover:text-foreground"
             >
               <s.icon className="h-5 w-5" />
             </a>

@@ -14,7 +14,7 @@ export function Contact() {
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeading
           eyebrow="Contact"
-          title={<>Let's Build Your Next <span className="text-gradient">AI Product</span></>}
+          title={<>Let's Build Your Next <span className="text-brand">AI Product</span></>}
           subtitle="Websites, mobile apps, landing pages, dashboards, or full UI/UX design systems — if you're shipping an AI-powered digital product, I'd love to help design it."
         />
 
@@ -25,9 +25,9 @@ export function Contact() {
                 href={c.href}
                 target={c.href.startsWith("mailto") ? undefined : "_blank"}
                 rel="noopener noreferrer"
-                className="group flex items-center gap-4 rounded-2xl border border-border/80 bg-card/70 p-5 shadow-card backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-brand/50 hover:shadow-[var(--shadow-glow)]"
+                className="group flex items-center gap-4 rounded-2xl border border-border bg-card p-5 shadow-card transition-all duration-300 hover:-translate-y-0.5 hover:border-brand/40"
               >
-                <span className="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-gradient-brand text-primary-foreground shadow-md transition-transform duration-300 group-hover:scale-105">
+                <span className="grid h-12 w-12 shrink-0 place-items-center rounded-xl border border-border bg-secondary/60 text-brand transition-colors duration-300 group-hover:text-foreground">
                   <c.icon className="h-5 w-5" />
                 </span>
                 <span className="min-w-0 truncate text-sm font-semibold text-muted-foreground transition-colors group-hover:text-foreground sm:text-base">
