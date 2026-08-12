@@ -6,12 +6,12 @@ export function About() {
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <Reveal>
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-brand-cyan">
+              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-brand">
                 About Me
               </p>
               <h2 className="mt-4 text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
                 Designing Modern{" "}
-                <span className="text-gradient">AI-Powered Products</span>
+                <span className="text-brand">AI-Powered Products</span>
               </h2>
               <div className="mt-8 max-w-3xl space-y-5 text-base leading-[1.8] text-muted-foreground sm:text-lg">
                 <p>
@@ -36,7 +36,7 @@ export function About() {
                     href="https://cityvoice-demo.netlify.app/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-brand-cyan underline-offset-4 hover:underline"
+                    className="text-brand underline-offset-4 hover:underline"
                   >
                     CityVoice
                   </a>
