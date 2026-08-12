@@ -96,9 +96,9 @@
   --brand-violet: oklch(0.61 0.22 293);
   --font-display: "Sora", ui-sans-serif, system-ui, sans-serif;
   --font-body: "Manrope", ui-sans-serif, system-ui, sans-serif;
-  --gradient-brand: linear-gradient(120deg, var(--brand) 0%, var(--brand-cyan) 50%, var(--brand-violet) 100%);
-  --shadow-glow: 0 0 0 1px color-mix(in oklab, var(--brand) 25%, transparent), 0 20px 60px -20px color-mix(in oklab, var(--brand) 45%, transparent);
-  --shadow-card: 0 1px 0 0 color-mix(in oklab, var(--foreground) 6%, transparent), 0 24px 50px -28px color-mix(in oklab, var(--foreground) 40%, transparent);
+  --gradient-brand: linear-gradient(100deg, var(--brand) 0%, var(--brand-violet) 100%);
+  --shadow-glow: 0 0 0 1px color-mix(in oklab, var(--brand) 18%, transparent), 0 16px 40px -24px color-mix(in oklab, var(--brand) 35%, transparent);
+  --shadow-card: 0 1px 0 0 color-mix(in oklab, var(--foreground) 5%, transparent), 0 18px 40px -30px color-mix(in oklab, var(--foreground) 30%, transparent);
   --chart-1: oklch(0.54 0.22 264);
   --chart-2: oklch(0.72 0.13 207);
   --chart-3: oklch(0.61 0.22 293);
@@ -138,9 +138,9 @@
   --brand: oklch(0.62 0.2 264);
   --brand-cyan: oklch(0.74 0.13 207);
   --brand-violet: oklch(0.66 0.2 293);
-  --gradient-brand: linear-gradient(120deg, var(--brand) 0%, var(--brand-cyan) 50%, var(--brand-violet) 100%);
-  --shadow-glow: 0 0 0 1px color-mix(in oklab, var(--brand) 35%, transparent), 0 20px 70px -20px color-mix(in oklab, var(--brand) 55%, transparent);
-  --shadow-card: 0 1px 0 0 color-mix(in oklab, var(--foreground) 8%, transparent), 0 28px 60px -32px oklch(0 0 0 / 0.7);
+  --gradient-brand: linear-gradient(100deg, var(--brand) 0%, var(--brand-violet) 100%);
+  --shadow-glow: 0 0 0 1px color-mix(in oklab, var(--brand) 22%, transparent), 0 18px 50px -28px color-mix(in oklab, var(--brand) 40%, transparent);
+  --shadow-card: 0 1px 0 0 color-mix(in oklab, var(--foreground) 6%, transparent), 0 24px 50px -36px oklch(0 0 0 / 0.6);
   --chart-1: oklch(0.62 0.2 264);
   --chart-2: oklch(0.74 0.13 207);
   --chart-3: oklch(0.66 0.2 293);
@@ -195,8 +195,8 @@
 }
 
 @utility glass-card {
-  background-color: color-mix(in oklab, var(--card) 75%, transparent);
-  backdrop-filter: blur(14px);
+  background-color: color-mix(in oklab, var(--card) 82%, transparent);
+  backdrop-filter: blur(12px);
   border: 1px solid var(--border);
 }
 
