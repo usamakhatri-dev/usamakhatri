@@ -8,7 +8,7 @@ import { About } from "@/components/portfolio/About";
 import { Projects } from "@/components/portfolio/Projects";
 import { Contact } from "@/components/portfolio/Contact";
 import { Footer } from "@/components/portfolio/Footer";
-import profileAsset from "@/assets/usama-profile.png.asset.json";
+import profileImg from "@/assets/usama-profile.png";
 
 const DESC =
   "Portfolio of Usama Khatri — AI Website Designer, AI Mobile App Designer, and UI/UX Designer building landing pages, dashboards, SaaS interfaces, and AI-powered digital products.";
@@ -74,7 +74,7 @@ function Loader() {
             transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut", delay: 0.4 }}
           />
           <img
-            src={profileAsset.url}
+            src={profileImg}
             alt="Usama Khatri"
             width={80}
             height={80}

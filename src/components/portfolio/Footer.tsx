@@ -1,6 +1,6 @@
 import { Linkedin, Mail } from "lucide-react";
 import { socials } from "@/lib/portfolio-data";
-import profileAsset from "@/assets/usama-profile.png.asset.json";
+import profileImg from "@/assets/usama-profile.png";
 
 const icons = [
   { icon: Linkedin, href: socials.linkedin, label: "LinkedIn" },
@@ -14,7 +14,7 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-5 text-center sm:px-8">
         <a href="#home" className="inline-flex items-center gap-3 font-display text-xl font-extrabold tracking-tight">
           <img
-            src={profileAsset.url}
+            src={profileImg}
             alt="Usama Khatri"
             width={36}
             height={36}

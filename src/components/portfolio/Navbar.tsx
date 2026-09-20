@@ -3,7 +3,7 @@ import { Moon, Sun } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { useTheme } from "@/hooks/use-theme";
-import profileAsset from "@/assets/usama-profile.png.asset.json";
+import profileImg from "@/assets/usama-profile.png";
 
 export function Navbar() {
   const { theme, toggleTheme } = useTheme();
@@ -26,7 +26,7 @@ export function Navbar() {
       <nav className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 sm:px-8">
         <a href="#home" className="flex items-center gap-2 font-display text-lg font-extrabold">
           <img
-            src={profileAsset.url}
+            src={profileImg}
             alt="Usama Khatri"
             width={36}
             height={36}
